@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect to Local File</title>
-    <script>
-        // Get the file path from the query string
-        const params = new URLSearchParams(window.location.search);
-        const filePath = params.get('file');
-
-        if (filePath) {
-            // Redirect to the local file or app using a custom scheme
-            window.location.href = `your-custom-scheme://${filePath}`; // Replace with your custom scheme
-        } else {
-            document.body.innerHTML = '<h1>File not specified</h1>';
-        }
-    </script>
+    <title>Open Local Apps</title>
 </head>
 <body>
-    <h1>Redirecting...</h1>
+    <h1>Open Local Applications</h1>
+    <p>Click the buttons below to open local applications.</p>
+
+    <button onclick="window.location.href='myapp://open'">Open MyApp</button>
+    <br>
+    <button onclick="window.location.href='vscode://'">Open VS Code</button>
+    <br>
+    <button onclick="window.location.href='notion://'">Open Notion</button>
 </body>
 </html>
